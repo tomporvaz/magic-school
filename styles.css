@@ -1,0 +1,67 @@
+body, html {
+  margin: 0;
+  background-color: ghostwhite;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* Sidebar */
+.sidebar {
+  height: 100%;
+  width: 320px;
+  background-color: #2E294E;
+  position: fixed;
+  font-family: 'Fira Sans', sans-serif;
+
+
+  display: grid;
+  grid-template-columns: 70px auto;
+  grid-template-rows: 70px 100px 210px ;
+  grid-template-areas: 
+    "logo  logo-text"
+    ". ."
+    "courses courses";
+
+  justify-items: start;
+  align-items: center;
+}
+
+#logo {
+  grid-area: logo;
+  height: 50px;
+  color: white;
+  margin: 10px;
+}
+
+.logo-text {
+  grid-area: logo-text;
+  color: #C5D86D;
+  font-size: 36px;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.sidebar-courses {
+  grid-area: courses;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, 70px);
+  justify-items: start;
+  align-items: center;
+
+}
+
+.sidebar-item-text {
+  color: #C5D86D;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.course-icon {
+  margin: 10px;
+  color: white;
+  font-size: 40px;
+}
