@@ -7,27 +7,81 @@ a {
   text-decoration: none;
 }
 
+main {
+  margin-left: max(10vw, 70px);
+  margin-right: auto;
+
+  padding: 5vw;
+  min-height: 85vh;
+  max-width: 1200px;
+}
+
+main h1 {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+main h2 {
+  font-family: 'Fira Sans', sans-serif;
+
+}
+
+main p {
+  font-family: 'Oxygen', sans-serif;
+
+}
+
 
 /* Sidebar */
 .sidebar {
   height: 100%;
-  width: 320px;
+  width: 70px;  /* 70px closed; 320px open*/
   background-color: #2E294E;
   position: fixed;
   font-family: 'Fira Sans', sans-serif;
-
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 1;
 
   display: grid;
   grid-template-columns: 70px auto;
   grid-template-rows: 70px 100px 210px ;
   grid-template-areas: 
     "logo  logo-text"
-    ". ."
+    "open closed"
     "courses courses";
 
   justify-items: start;
   align-items: center;
 }
+
+.chevron-open {
+  grid-area: open;
+  justify-self: end;
+  padding: 23px 6px 23px 23px;
+  color: #f46036;
+  font-size: 24px;
+  background-color: transparent;
+  border: 0;
+}
+
+.chevron-close {
+  grid-area: closed;
+  justify-self: end;
+  padding: 23px 6px 23px 23px;
+  color: #f46036;
+  font-size: 24px;
+  background-color: transparent;
+  border: 0;
+}
+
+.chevron-open:hover, .chevron-close:hover {
+  background-color: #574D93;
+ /*  box-shadow: -2px 1px 2px 1px #443b74; */
+  border: outset;
+  border-color: #443b74; 
+  
+}
+
 
 #logo {
   grid-area: logo;
@@ -47,11 +101,19 @@ a {
 .sidebar-courses {
   grid-area: courses;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 320px;
   grid-template-rows: repeat(3, 70px);
   justify-items: start;
   align-items: center;
 
+}
+
+.course-link {
+  width: 100%;
+}
+
+.course-link:hover {
+  background-color: #574D93;
 }
 
 .sidebar-item-text {
@@ -64,4 +126,62 @@ a {
   margin: 10px;
   color: white;
   font-size: 40px;
+}
+
+/* Homepage Course Grid */
+
+.course-grid {
+  position: relative;
+  margin-left: 70px;
+  height: auto;
+  min-height: 85vh;
+  padding: 5vh 0 5vh 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.course-card {
+  height: 40vw;
+  width: 60vw;
+  max-height: 200px;
+  max-width: 300px;
+  margin: 6vw;
+  box-shadow: 8px 8px 5px 3px grey;
+  border-radius: 10%;
+}
+
+.course-card img {
+  height: 40vw;
+  width: 60vw;
+  max-height: 200px;
+  max-width: 300px;
+  border-radius: 10%;
+}
+
+.course-card-text {
+  position: relative;
+  bottom: 50px;
+  text-align: center;
+  font-family: 'Fira Sans', sans-serif;
+  color: white;
+  font-size: 30px;
+
+}
+
+/* footer */
+footer {
+
+  background-color: #c5d86d;
+  text-align: center;
+  height: 15vh;
+  display: block;
+  position: relative;
+  font-family: 'Oxygen', sans-serif;
+  margin: 0 0 0 70px;
+}
+footer p {
+  margin: 0;
+  padding: 5px;
 }
