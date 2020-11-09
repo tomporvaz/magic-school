@@ -6,11 +6,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Oxygen&display=swap" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
   <link href="./assets/fontawesome-all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script  src="script.js"></script>
   <title>Magic School</title>
 </head>
 <body>
+  <!-- Sidebar -->
   <nav class="sidebar">
     <a href="./home.html">
       <img id="logo" src="./assets/magic-book.svg" alt="Open book with stars Magic School logo"/>
@@ -18,22 +20,22 @@
     <a href="./home.html" >
       <span class="logo-text">Magic School</span>
     </a>
-
+    
     <button class="chevron-open">
-    <i class="fas fa-chevron-right "></i>
+      <i class="fas fa-chevron-right "></i>
     </button>
-
+    
     <button class="chevron-close">
       <i class="fas fa-chevron-left"></i>
     </button>
-
+    
     
     <div class="sidebar-courses">
       <a class="course-link" href="./social-studies.html">
         <i class="fas fa-landmark course-icon"></i>
         <span class="sidebar-item-text">Social Studies</span>
       </a>
-
+      
       <a class="course-link" href="./health.html">
         <i class="fas fa-heartbeat course-icon"></i>
         <span class="sidebar-item-text">Health</span>
@@ -44,17 +46,93 @@
         <span class="sidebar-item-text">English</span>
       </a>
       
-
     </div>
     
   </nav>
-
-
   
+  <!-- English Main Content-->
+  <main>
+    <h1>Words to Know</h1>
+    <h2>What words should you know to appreciate the rest of Part 1 of the novel?</h2>
+    
+    <p>
+      Although Miyax has finally made friends with Amaroq and the other wolves in his pack, she is still
+      struggling to survive. Getting Jello to share some meat from his "belly basket" had been a desperate and
+      dangerous move on her part, and she can't rely on this method forever. The next time she tries, he
+      might attack her instead of giving in to his "babysitting" instincts.
+    </p>
+    
+    <p>
+      Throughout the rest of Part I of Julie of the Wolves, the protagonist continues her quest to stay alive in
+      spite of the harshness of the elements, a shortage of food, and her loneliness. Some of the words below
+      may be unfamiliar to you, and yet they will be helpful in understanding Miyax's difficult situation color2
+      after winning Amaroq's trust.
+    </p>
+    
+    <div id="table-with-picture">
+      <span class="word">forage</span>   
+      <span class="word">improvisation</span>
+      <span class="word">undulate</span>
+      <span class="word">errie</span>
+      <span class="word">writhed</span>
+      <span class="word">tribute</span>
+      <span class="word">menacingly</span>
+      <span class="word">morsel</span>
+      <div id="word-picture">
+        <img src="./assets/wolf-denali-national-park-alaska-600w-61091524.jpg" alt="Wolf in mountain brush">
+      </div>
+    </div>
+    
+    <p>
+      See if you can figure out what each word might mean when used to describe someone's attempt to
+      survive alone in the Alaskan tundra. Then click the word to see its definition as it will appear in the
+      novel.
+    </p>
+
+    <table id="definitions-table">
+      <tr class="color1">
+        <td class="word-undefined">forage</td>
+        <td class="definition"></td>
+      </tr>
+      <tr class="color2">
+        <td class="word-undefined">improvisation</td>
+        <td class="definition"></td>
+      </tr>
+      <tr class="color1">
+        <td class="word-undefined">undulating</td>
+        <td class="definition"></td>
+      </tr>
+      <tr class="color2">
+        <td class="word-undefined">errie</td>
+        <td class="definition"></td>
+      </tr>
+      <tr class="color1">
+        <td class="word-undefined">writhed</td>
+        <td class="definition"></td>
+      </tr>
+      <tr class="color2">
+        <td class="word-undefined">tribute</td>
+        <td class="definition"></td>
+      </tr>
+      <tr class="color1">
+        <td class="word-undefined">menacingly</td>
+        <td class="definition"></td>
+      </tr>
+      <tr class="color2">
+        <td class="word-undefined">morsel</td>
+        <td class="definition"></td>
+      </tr>
+
+    </table>
+  </main>
   
+  <!-- Footer -->
   <footer>
-    <p>Magic Book icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
-    <p>Remaining icons provided by <a href="https://fontawesome.com/" target="new">Font Awesome</a></p>
+    <div class="footer-text">
+      <p>Magic Book icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+      <p>Remaining icons provided by <a href="https://fontawesome.com/" target="new">Font Awesome</a></p>
+    </div>
   </footer>
+  
 </body>
 </html>

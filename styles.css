@@ -1,4 +1,4 @@
-body, html {
+html body, html {
   margin: 0;
   background-color: ghostwhite;
 }
@@ -91,7 +91,7 @@ body button:hover {
  /*  box-shadow: -2px 1px 2px 1px #443b74; */
   border: outset;
   border-color: #443b74; 
-  
+  cursor: pointer;
 }
 
 
@@ -204,11 +204,11 @@ body button:hover {
   opacity: 1;
 }
 
-.question {
+.open-question {
   margin: 3rem auto 2rem auto;
 }
 
-.question span {
+.open-question span {
   font-size: 1.5rem;
 }
 
@@ -232,18 +232,126 @@ body button:hover {
   display: none;
 }
 
+/* Health Multiple choices page */
+.mc-quiz-container {
+  margin: 3rem 0;
+}
+
+.feedback {
+  display: inline-block; 
+  padding: 2rem 5rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+/* English Word tables page */
+#table-with-picture {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: repeat(8, 3rem);
+  place-items: center;
+  margin: 3rem 5rem 3rem 2rem;
+  background-color: #2e294e;
+}
+
+#word-picture {
+  grid-area: 1 / 2 / 9 / 3 ;
+  display: block;
+  height: 35vw;
+  max-height: 22rem;
+  margin: 1rem;
+
+}
+
+#word-picture img {
+  height: 35vw;
+  max-height: 22rem;
+}
+
+@media (max-width: 1023px) {
+  #table-with-picture {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto repeat(8, 3rem);
+    margin: 5vw 0;
+  }
+  
+  #word-picture {
+    grid-area: 1 / 1 / 2 / 2 ;
+    display: block;
+    height: 40vw;
+    max-height: 20rem;
+  }
+  
+  #word-picture img {
+    height: 40vw;
+    max-height: 20rem;
+  }
+}
+
+.word {
+  display: block;
+  width: 90%;
+  height: 90%;
+  padding: .2rem;
+  margin: .5rem;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #c5d86d;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* English table with definitions */
+#definitions-table {
+  margin: 3rem auto;
+}
+
+.color1 {
+  background-color: #c5d86d;
+}
+
+.color1:hover .word-undefined{
+  background-color: #d8e59e;
+  cursor: pointer;
+}
+
+.color2 {
+  background-color: #f46036;
+}
+
+.color2:hover .word-undefined{
+  background-color: #F89377;
+  cursor: pointer;
+}
+
+#definitions-table td {
+  border: 1px solid #ffffff;
+}
+
+.word-undefined {
+  padding: 1rem;
+  font-weight: bold;
+}
+.definition {
+  width: 30rem;
+  padding: .5rem;
+}
+
+
+
+
+
 
 /* footer */
 footer {
   background-color: #c5d86d;
   text-align: center;
   height: 100%;
-  padding: 1vh 0 2vh 0;
+  padding: 3vh 0 4.5vh 0;
   display: block;
   position: relative;
   font-family: 'Oxygen', sans-serif;
-
-
 }
 
 .footer-text {
@@ -256,3 +364,4 @@ footer p {
   margin: auto;
   padding: 5px;
 }
+
